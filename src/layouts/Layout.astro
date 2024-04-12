@@ -2,6 +2,7 @@
 
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -30,5 +31,6 @@ const { title,description="Tur",image } = Astro.props;
 	<body>
 			<Header />
 			<slot />
+			<Footer/>
 	</body>
 </html>

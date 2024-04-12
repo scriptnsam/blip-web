@@ -1,6 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle"
-import { Docker, GO, JQuery } from "./icons/icons";
+import {  Github, JQuery, Twitter } from "./icons/icons";
 
 ---
 <header class=" border-b border-[#c7b3afbe] dark:border-[#283564] w-[100%] h-20 overflow-hidden sticky">
@@ -14,10 +14,9 @@ import { Docker, GO, JQuery } from "./icons/icons";
             <div class="nav-list"><a href="/about">About</a></div>
         </div>
         <!-- mobile and other smaller devices -->
-        <div class="sm:hidden flex w-[50%] mx-auto justify-center space-x-3 p-[2px]">
-            <div class="tools-img"><GO/></div>
-            <div class="tools-img"><Docker/></div>
-            <div class="tools-img"><JQuery/></div>
+        <div class="sm:hidden flex w-[50%] mx-auto justify-center space-x-4  p-[2px]">
+            <a href="https://github.com/scriptnsam/blip-v2.git"><div class="tools-img"><Github/></div></a>
+            <div class="tools-img"><Twitter/></div>
         </div>
        <ThemeToggle client:load />
     </div>
