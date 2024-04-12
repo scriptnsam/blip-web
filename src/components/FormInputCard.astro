@@ -1,0 +1,15 @@
+---
+interface Props{
+    label:string,
+    inputType?:string,
+    required?:boolean,
+    minLength?:string
+}
+
+const {label,inputType,required,minLength}=Astro.props;
+---
+
+<div class="font-sans md:flex md:space-x-4 md:items-center p-2 mb-3">
+    <div class="w-40 max-sm:mb-2"><label for={label.toLowerCase()} class="font-semibold mb-5">{label}</label></div>
+    <div><input type={label.toLowerCase() =="password"?"password":"text"} id={label.toLowerCase()} name={label.toLowerCase()} required={required} minlength={minLength} class="h-10 w-[250px] max-md:w-[100%] border border-red-400 bg-red-100 dark:border-gray-400 dark:bg-gray-100 rounded custom-input px-2 dark:text-gray-700 "></div>
+</div>

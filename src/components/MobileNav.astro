@@ -1,0 +1,18 @@
+---
+import MenuListCard from "./MenuListCard.astro";
+---
+
+<div class="border w-[95%] mx-auto mt-4 p-2 sm:hidden border-gray-400 shadow-sm rounded dark:border-[#ffdcd960] font-mono ">
+    <input type="checkbox" id="menu-toggle" class="hidden">
+    <label for="menu-toggle">
+        <div class="font-bold text-lg"><span id="arrow">&rightarrow;</span> Menu</div>
+    </label>
+
+    <!-- dropdown menu -->
+    <div class="dropdown">
+        <MenuListCard Name="Sign Up" url="/signup"/>
+        <MenuListCard Name="Sign In" url="/signin"/>
+        <MenuListCard Name="Docs" url="/docs"/>
+        <MenuListCard Name="About" url="/about"/>
+    </div>
+</div>

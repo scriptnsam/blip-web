@@ -1,0 +1,10 @@
+---
+interface Props{
+    Name: string,
+    url: string
+}
+
+const {Name,url} = Astro.props;
+---
+
+<div class="mobile-nav"><a href={url}><span class="harpoons">&rightleftharpoons;</span> {Name}</a></div>

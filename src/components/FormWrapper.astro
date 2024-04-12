@@ -1,0 +1,17 @@
+---
+import H1 from './H1.astro';
+
+interface Props{
+    height?:number,
+    title:string
+}
+
+const {height,title} = Astro.props;
+---
+
+<div class=`p-2 py-5 border border-pink-300 dark:border-slate-500 rounded shadow-sm dark:shadow-gray-400 overflow-auto md:h-[${height}px]` >
+    <H1>{title}</H1>
+    <div class="md:flex">
+    <slot/>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply min-h-screen m-0 p-0 dark:bg-[#11101a] bg-[#ffdcd9] text-gray-900 dark:text-gray-300
+}
+
+.nav-list{
+    @apply cursor-pointer hover:scale-150 duration-150 font-semibold hover:text-[#ff35238a] dark:hover:text-[#fd7468] underline hover:no-underline
+}
+
+.logo{
+    @apply font-mono rounded text-[30px] font-extrabold bg-gradient-to-br from-[#ffdcd960] to-[#ff35238a] dark:from-[#797979ad] dark:to-[#00076885]
+}
+
+div.toggle-dot{
+    @apply p-2 rounded-sm hover:ring-[#fd7468] hover:ring-4 dark:hover:ring-[#00076885] transform ease-in-out bg-white duration-300
+}
+
+#toggle:checked ~ label div.toggle-dot{
+    @apply translate-x-5
+}
+
+.tools-img{
+    @apply text-gray-700 dark:text-gray-200 w-8 h-8 fill-current
+}
+
+div.dropdown{
+    @apply hidden px-3 py-1 text-wrap overflow-auto mt-2
+}
+
+#menu-toggle:checked ~ div.dropdown{
+    @apply block
+}
+
+.mobile-nav{
+    @apply mt-3 text-lg font-semibold px-1
+}
+
+.harpoons{
+    @apply hidden
+}
+
+.mobile-nav:active{
+    @apply text-red-500 dark:text-red-300
+}
+
+.mobile-nav:active a span.harpoons{
+    @apply inline
+}
+
+.custom-input{
+    @apply focus:outline-none focus:ring-2 focus:ring-red-500 dark:focus:ring-[#000768]
+}

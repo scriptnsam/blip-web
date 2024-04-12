@@ -1,0 +1,29 @@
+---
+import FormInputCard from '../components/FormInputCard.astro';
+import FormWrapper from '../components/FormWrapper.astro';
+import H1 from '../components/H1.astro';
+import Main from '../components/Main.astro';
+import MobileNav from '../components/MobileNav.astro';
+import SubmitButton from '../components/SubmitButton.astro';
+import SvgSwitch from '../components/SvgSwitch';
+import Layout from '../layouts/Layout.astro';
+import "../styles.css";
+---
+
+<Layout title="Blip | Sign Up">
+    <MobileNav/>
+    <Main>
+        <FormWrapper title='Create an account' height={150}>
+
+            <form autocomplete="off">
+                <FormInputCard label='Email' required={true}/>
+                <FormInputCard label='Username' minLength='3' required={true}/>
+                <FormInputCard label='Password' minLength='8' required={true}/>
+                <FormInputCard label='Confirm Password' minLength='8' required={true}/>
+                <SubmitButton name='Sign Up'/>
+            </form>
+
+            <SvgSwitch h={310} darkImg='svgs/sign_up_dark.svg' lightImg='svgs/sign_up.svg' client:load/>
+        </FormWrapper>
+    </Main>
+</Layout>

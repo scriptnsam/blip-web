@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from '../components/Main.astro';
+import "../styles.css";
+import MobileNav from "../components/MobileNav.astro";
+import FormInputCard from "../components/FormInputCard.astro";
+import SubmitButton from "../components/SubmitButton.astro";
+import FormWrapper from "../components/FormWrapper.astro";
+import SvgSwitch from "../components/SvgSwitch";
+---
+
+<Layout title="Blip | Sign In">
+    <MobileNav/>
+    <Main>
+        <FormWrapper height={290} title="Welcome Back">
+                <!-- password and username signin -->
+                <form autocomplete="off">
+                    <FormInputCard label="Username" required={true} minLength="3"/>            
+                    <FormInputCard label="Password" required={true} minLength="8"/>
+                    <p class="my-3 ml-2 font-bold w-fit hover:underline cursor-pointer"><a href="#">Reset Password</a></p>
+                    <SubmitButton name="Login"/>        
+                </form>
+
+                <SvgSwitch darkImg="svgs/login_dark.svg" lightImg="svgs/login.svg" h={210} client:load/>
+        </FormWrapper>
+    </Main>
+</Layout>

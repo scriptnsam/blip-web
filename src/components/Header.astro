@@ -1,0 +1,24 @@
+---
+import ThemeToggle from "./ThemeToggle"
+import { Docker, GO, JQuery } from "./icons/icons";
+
+---
+<header class=" border-b border-[#c7b3afbe] dark:border-[#283564] w-[100%] h-20 overflow-hidden sticky">
+    <div class="flex items-center h-[100%] w-[85%] max-sm:w-[100%] mx-auto justify-around px-3 max-md:justify-between ">
+        <a href="./"><div class=" p-2 logo">&GreaterEqual;Blip</div></a>
+        <!-- tablet above -->
+        <div class="flex px-6 items-center w-[350px] justify-around max-sm:hidden mx-auto font-mono text-lg ">
+            <div class="nav-list"><a href="/signup">Sign Up</a></div>
+            <div class="nav-list"><a href="/signin">Sign In</a></div>
+            <div class="nav-list"><a href="/docs">Docs</a></div>
+            <div class="nav-list"><a href="/about">About</a></div>
+        </div>
+        <!-- mobile and other smaller devices -->
+        <div class="sm:hidden flex w-[50%] mx-auto justify-center space-x-3 p-[2px]">
+            <div class="tools-img"><GO/></div>
+            <div class="tools-img"><Docker/></div>
+            <div class="tools-img"><JQuery/></div>
+        </div>
+       <ThemeToggle client:load />
+    </div>
+</header>
