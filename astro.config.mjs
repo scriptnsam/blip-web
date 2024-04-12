@@ -8,5 +8,5 @@ export default defineConfig({
   integrations: [tailwind({
     nesting: true
   }), react()],
-  output: "server"
+  // output: "server"
 });
