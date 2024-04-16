@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply m-0 p-0
+}
+
+.scrollbar-remove::-webkit-scrollbar{
+    @apply hidden
+}
+
+.icon-merge{
+    @apply flex items-center
+}
